@@ -9,5 +9,5 @@ select * from khach_hang
 where (dia_chi like "%Đà nẵng%" or dia_chi like "%Quảng Trị%") and ((year(curdate()) - year(ngay_sinh)) > 18 and (year(curdate()) - year(ngay_sinh)) <= 50);
 
 -- task4:
-select * from khach_hang
-where loai_khach_hang like "Diamond"; 
+select ma_khach_hang from hop_dong
+order by ma_khach_hang;

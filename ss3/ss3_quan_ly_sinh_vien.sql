@@ -64,7 +64,25 @@ VALUES (1, 1, 8, 1),
 select * 
 from student
 where studentName like "H%";
+
 -- Hiển thị các thông tin lớp học có thời gian bắt đầu vào tháng 12
 select *
 from class
-where startDate 
+where month(startDate) = '12';
+
+-- Hiển thị tất cả các thông tin môn học có credit trong khoảng từ 3-5.
+select *
+from subject
+where credit between 3 and 5;
+
+-- Thay đổi mã lớp(ClassID) của sinh viên có tên ‘Hung’ là 2.
+update student
+set classId = 2
+where studentId = 1;
+
+-- Hiển thị các thông tin: StudentName, SubName, Mark. Dữ liệu sắp xếp theo điểm thi (mark) giảm dần. nếu trùng sắp theo tên tăng dần.
+select student.studentName, mark.mark, subject.subName
+from student
+join mark on student.studentId = mark.studentId
+join subject on subject.subId = mark.subId
+order by mark.mark desc;

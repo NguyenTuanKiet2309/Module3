@@ -80,8 +80,8 @@ so_cmnd varchar(45) not null,
 so_dien_thoai varchar(45) not null,
 email varchar(45),
 dia_chi varchar(45),
-loai_khach_hang int,
-foreign key(loai_khach_hang) references loai_khach(ma_loai_khach)
+ma_loai_khach int,
+foreign key(ma_loai_khach) references loai_khach(ma_loai_khach)
 );
 
 create table hop_dong(
@@ -130,7 +130,7 @@ values ("Nguyễn Văn An", 19701107,"456231786",10000000,"0901234121","annguyen
 insert into loai_khach(ten_loai_khach)
 values ("Diamond"),("Platinium"),("Gold"),("Silver"),("Member");
 
-insert into khach_hang(ho_ten,ngay_sinh,gioi_tinh, so_cmnd,so_dien_thoai,email,dia_chi,loai_khach_hang)
+insert into khach_hang(ho_ten,ngay_sinh,gioi_tinh, so_cmnd,so_dien_thoai,email,dia_chi,ma_loai_khach)
 values ("Nguyễn Thị Hào",19701107,0,"643431213","0945423362","thihao07@gmail.com","23 Nguyễn Hoàng, Đà Nẵng",5),
 ("Phạm Xuân Diệu",19920808,1,"865342123","0954333333","xuandieu92@gmail.com","K77/22 Thái Phiên, Quảng Trị",3),
 ("Trương Đình Nghệ",19900227,1,"488645199","0373213122","nghenhan2702@gmail.com","K323/12 Ông Ích Khiêm, Vinh",1),

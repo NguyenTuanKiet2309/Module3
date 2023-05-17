@@ -20,11 +20,12 @@ group by ma_khach_hang
 order by so_lan_dat_phong;
 
 -- task5:
-select kh.ma_khach_hang, kh.ho_ten, lk.ten_loai_khach,hd.ma_hop_dong,dv.ten_dich_vu,hd.ngay_lam_hop_dong,hd.ngay_ket_thuc
+select kh.ma_khach_hang, kh.ho_ten, lk.ten_loai_khach,hd.ma_hop_dong,dv.ten_dich_vu,hd.ngay_lam_hop_dong,hd.ngay_ket_thuc,
+sum(dv.chi_phi_thue + ifnull((hdct.so_luong * dvdk.gia),0)) as "tổng tiền"
 from khach_hang kh
-left join loai_khach lk 
+join loai_khach lk 
 on kh.ma_loai_khach = lk.ma_loai_khach
-join hop_dong hd 
+left join hop_dong hd 
 on hd.ma_khach_hang = kh.ma_khach_hang
 left join dich_vu dv 
 on dv.ma_dich_vu = hd.ma_dich_vu

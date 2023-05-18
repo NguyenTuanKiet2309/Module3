@@ -21,7 +21,7 @@ order by so_lan_dat_phong;
 
 -- task5:
 select kh.ma_khach_hang, kh.ho_ten, lk.ten_loai_khach,hd.ma_hop_dong,dv.ten_dich_vu,hd.ngay_lam_hop_dong,hd.ngay_ket_thuc,
-sum(dv.chi_phi_thue + ifnull((hdct.so_luong * dvdk.gia),0)) as "tổng tiền"
+sum(dv.chi_phi_thue + ifnull((hdct.so_luong * dvdk.gia),0)) as "tong_tien"
 from khach_hang kh
 join loai_khach lk 
 on kh.ma_loai_khach = lk.ma_loai_khach

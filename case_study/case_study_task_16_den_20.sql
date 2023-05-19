@@ -3,8 +3,7 @@ use case_study;
 -- Task 16.	Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2019 đến năm 2021.
 set sql_safe_updates = 0;
 DELETE FROM nhan_vien 
-WHERE
-    ma_nhan_vien NOT IN (SELECT *
+WHERE ma_nhan_vien NOT IN (SELECT *
     FROM (SELECT nv.ma_nhan_vien
         FROM nhan_vien nv
         JOIN hop_dong hd ON hd.ma_nhan_vien = nv.ma_nhan_vien
@@ -44,10 +43,8 @@ WHERE
 -- Task 19.	Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
 set sql_safe_updates = 0;
 UPDATE dich_vu_di_kem 
-SET 
-    gia = gia * 2
-WHERE
-    ma_dich_vu_di_kem IN (SELECT *
+SET gia = gia * 2
+WHERE ma_dich_vu_di_kem IN (SELECT *
 	FROM (SELECT hdct.ma_dich_vu_di_kem
 		FROM dich_vu_di_kem dvdk
 		JOIN hop_dong_chi_tiet hdct ON hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem

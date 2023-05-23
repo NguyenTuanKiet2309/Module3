@@ -8,7 +8,13 @@ a{
     color: blue;
     text-decoration: none;
 }
-
+sup{
+    color: blue;
+    font-size: 50%;
+}
+#sup1{
+    color: black;
+}
 div{
     width: 50%;
     padding-left: 1.5em;

@@ -8,7 +8,7 @@ JOIN hop_dong hd ON hdct.ma_hop_dong = hd.ma_hop_dong
 JOIN khach_hang kh ON kh.ma_khach_hang = hd.ma_khach_hang
 JOIN loai_khach lk ON kh.ma_loai_khach = lk.ma_loai_khach
 WHERE lk.ten_loai_khach = 'Diamond'
-        AND kh.dia_chi REGEXP 'Vinh|Quãng Ngãi'
+        AND kh.dia_chi REGEXP 'Vinh|Quãng Ngãi';
  
 -- task 12.	Hiển thị thông tin ma_hop_dong, ho_ten (nhân viên), ho_ten (khách hàng), so_dien_thoai (khách hàng),ten_dich_vu,
 --  so_luong_dich_vu_di_kem (được tính dựa trên việc sum so_luong ở dich_vu_di_kem),tien_dat_coc của tất cả
@@ -60,10 +60,10 @@ SELECT
     dvdk.ten_dich_vu_di_kem,
     COUNT(hdct.ma_dich_vu_di_kem) AS 'so_lan_su_dung'
 FROM hop_dong hd
-        JOIN dich_vu dv ON hd.ma_dich_vu = dv.ma_dich_vu
-        JOIN loai_dich_vu ldv ON dv.ma_loai_dich_vu = ldv.ma_loai_dich_vu
-        JOIN hop_dong_chi_tiet hdct ON hdct.ma_hop_dong = hd.ma_hop_dong
-        JOIN dich_vu_di_kem dvdk ON dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
+JOIN dich_vu dv ON hd.ma_dich_vu = dv.ma_dich_vu
+JOIN loai_dich_vu ldv ON dv.ma_loai_dich_vu = ldv.ma_loai_dich_vu
+JOIN hop_dong_chi_tiet hdct ON hdct.ma_hop_dong = hd.ma_hop_dong
+JOIN dich_vu_di_kem dvdk ON dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
 WHERE hdct.ma_dich_vu_di_kem IN (
 		SELECT ma_dich_vu_di_kem
 		FROM hop_dong_chi_tiet hdct

@@ -25,7 +25,7 @@ WHERE ma_khach_hang = (SELECT *
             JOIN dich_vu_di_kem dvdk ON dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
             WHERE lk.ten_loai_khach = 'Platinium'
             GROUP BY kh.ma_khach_hang
-            HAVING SUM(dv.chi_phi_thue + dvdk.gia * hdct.so_luong) > 10000000) AS bang_tam);
+            HAVING SUM(dv.chi_phi_thue + dvdk.gia * hdct.so_luong) > 10000000) AS sua_thong_tin);
 set sql_safe_updates = 1;
 
 -- Task 18.	Xóa những khách hàng có hợp đồng trước năm 2021 (chú ý ràng buộc giữa các bảng).

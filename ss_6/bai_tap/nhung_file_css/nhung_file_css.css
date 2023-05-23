@@ -1,0 +1,12 @@
+/*Cách External*/
+h1{
+    color: green;
+    margin: 20px;
+    font-family: Arial;
+    font-size: 150%;
+    border: 1px solid navy;
+}
+p{
+    color: green;
+    font-family: "Times New Roman";
+}

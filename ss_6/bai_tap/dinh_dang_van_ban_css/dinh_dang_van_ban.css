@@ -1,31 +1,35 @@
-p{
+p {
     text-align: justify;
     text-indent: 3em;
     font-size: 110%;
 }
 
-a{
+a {
     color: blue;
     text-decoration: none;
 }
-sup{
+
+sup {
     color: blue;
     font-size: 50%;
 }
-#sup1{
+
+#sup1 {
     color: black;
 }
-div{
+
+div {
     width: 50%;
     padding-left: 1.5em;
     padding-right: 1.5em;
     padding-top: 10px;
 }
-h1{
+
+h1 {
     line-height: 0px;
 }
 
-#p1{
+#p1 {
     margin-top: 0px;
     /*margin-left: -50px;*/
     text-indent: 0em;

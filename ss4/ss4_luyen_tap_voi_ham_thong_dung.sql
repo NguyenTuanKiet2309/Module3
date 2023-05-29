@@ -1,14 +1,18 @@
-CREATE DATABASE ss4_luyen_tap_voi_ham_thong_dung;
-USE ss4_luyen_tap_voi_ham_thong_dung;
+CREATE
+DATABASE ss4_luyen_tap_voi_ham_thong_dung;
+USE
+ss4_luyen_tap_voi_ham_thong_dung;
 
-CREATE TABLE class(
+CREATE TABLE class
+(
     classID   INT         NOT NULL AUTO_INCREMENT PRIMARY KEY,
     className VARCHAR(60) NOT NULL,
     startDate DATETIME    NOT NULL,
     status    BIT
 );
 
-CREATE TABLE student(
+CREATE TABLE student
+(
     studentId   INT         NOT NULL AUTO_INCREMENT PRIMARY KEY,
     studentName VARCHAR(30) NOT NULL,
     address     VARCHAR(50),
@@ -18,14 +22,16 @@ CREATE TABLE student(
     FOREIGN KEY (ClassId) REFERENCES Class (ClassID)
 );
 
-CREATE TABLE `subject`(
+CREATE TABLE `subject`
+(
     subId   INT         NOT NULL AUTO_INCREMENT PRIMARY KEY,
     subName VARCHAR(30) NOT NULL,
     credit  TINYINT     NOT NULL DEFAULT 1 CHECK ( credit >= 1 ),
     status  BIT                  DEFAULT 1
 );
 
-CREATE TABLE mark(
+CREATE TABLE mark
+(
     markId    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     subId     INT NOT NULL,
     studentId INT NOT NULL,
@@ -33,8 +39,9 @@ CREATE TABLE mark(
     examTimes TINYINT DEFAULT 1,
     UNIQUE (subId, studentId),
     FOREIGN KEY (subId) REFERENCES subject (subId),
-    FOREIGN KEY (studentId) REFERENCES student (studentId));
-    
+    FOREIGN KEY (studentId) REFERENCES student (studentId)
+);
+
 INSERT INTO class
 VALUES (1, 'A1', '2008-12-20', 1);
 INSERT INTO class
@@ -53,35 +60,35 @@ INSERT INTO subject
 VALUES (1, 'CF', 5, 1),
        (2, 'C', 6, 1),
        (3, 'HDJ', 5, 1),
-       (4, 'RDBMS', 10, 1);	
-       
+       (4, 'RDBMS', 10, 1);
+
 INSERT INTO mark (subId, studentId, mark, examTimes)
 VALUES (1, 1, 8, 1),
        (1, 2, 10, 2),
        (2, 1, 12, 1);
-       
-       -- Hiển thị tất cả các thông tin môn học (bảng subject) có credit lớn nhất.
+
+-- Hiển thị tất cả các thông tin môn học (bảng subject) có credit lớn nhất.
 select *
 from subject
 where credit = (
-select max(credit) 
-from subject
+    select max(credit)
+    from subject
 );
 
 -- Hiển thị các thông tin môn học có điểm thi lớn nhất.
 select *
 from subject
-join mark
-on mark.subId = subject.subId
+         join mark
+              on mark.subId = subject.subId
 where mark = (
- select max(mark)
- from mark
-  );
-  
- -- Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần
-select student.* , avg(mark.mark)
+    select max(mark)
+    from mark
+);
+
+-- Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần
+select student.*, avg(mark.mark)
 from student
-join mark 
-on mark.studentId = student.studentId
+         join mark
+              on mark.studentId = student.studentId
 group by studentId
 order by avg(mark.mark) desc;

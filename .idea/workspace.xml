@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cfd2f4ee-da56-4d76-b5dd-043be2011f76" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/case_study-2/products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Module3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case_study/case_study.sql" beforeDir="false" afterPath="$PROJECT_DIR$/case_study/case_study.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case_study/case_study_task_11_den_15.sql" beforeDir="false" afterPath="$PROJECT_DIR$/case_study/case_study_task_11_den_15.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case_study/case_study_task_16_den_20.sql" beforeDir="false" afterPath="$PROJECT_DIR$/case_study/case_study_task_16_den_20.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case_study/case_study_task_20_den_28.sql" beforeDir="false" afterPath="$PROJECT_DIR$/case_study/case_study_task_20_den_28.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case_study/case_study_task_2_den_5.sql" beforeDir="false" afterPath="$PROJECT_DIR$/case_study/case_study_task_2_den_5.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case_study/case_study_task_6_den_10.sql" beforeDir="false" afterPath="$PROJECT_DIR$/case_study/case_study_task_6_den_10.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss1/ss1_bai_tap.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ss1/ss1_bai_tap.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss2/ss2_chuyen_doi_erd.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ss2/ss2_chuyen_doi_erd.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss2/ss2_quan_ly_ban_hang.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ss2/ss2_quan_ly_ban_hang.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss3/ss3_quan_ly_ban_hang.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ss3/ss3_quan_ly_ban_hang.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss3/ss3_quan_ly_sinh_vien.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ss3/ss3_quan_ly_sinh_vien.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss4/ss4_luyen_tap_voi_ham_thong_dung.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ss4/ss4_luyen_tap_voi_ham_thong_dung.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss5/ss5_luyen_tap_view_index_stored_procedure.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ss5/ss5_luyen_tap_view_index_stored_procedure.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss_6/bai_tap/dinh_dang_van_ban_css/dinh_dang_van_ban.css" beforeDir="false" afterPath="$PROJECT_DIR$/ss_6/bai_tap/dinh_dang_van_ban_css/dinh_dang_van_ban.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss_6/bai_tap/dinh_dang_van_ban_css/dinh_dang_van_ban.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss_6/bai_tap/dinh_dang_van_ban_css/dinh_dang_van_ban.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss_6/bai_tap/nhung_file_css/nhung_file_css.css" beforeDir="false" afterPath="$PROJECT_DIR$/ss_6/bai_tap/nhung_file_css/nhung_file_css.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss_6/bai_tap/nhung_file_css/nhung_file_css.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss_6/bai_tap/nhung_file_css/nhung_file_css.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss_6/thuc_hanh_css.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss_6/thuc_hanh_css.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss_7/tao_layout_voi_RWD.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss_7/tao_layout_voi_RWD.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss_7/web_hoat_hinh.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss_7/web_hoat_hinh.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss_8/Untitled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss_8/gallery_bootstraps.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss_8/gallery_bootstraps.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss_8/landing_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss_8/landing_page.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="2QSh7Sgk77xqcDl1LhmwIuK81We" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Codegym\Module3\src\main\webapp" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.75" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.75" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="hot-swap-classes" />
+      <deployment>
+        <artifact name="Gradle : com.example : ss9_java_web-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="AJP_PORT" value="1099" />
+        <option name="BASE_DIRECTORY_NAME" value="9fb2ffa2-0a80-44fa-a340-6611a4738a09" />
+        <option name="HTTP_PORT" value="8080" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52872" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : com.example : ss9_java_web-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cfd2f4ee-da56-4d76-b5dd-043be2011f76" name="Changes" comment="" />
+      <created>1685352725155</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685352725155</updated>
+      <workItem from="1685352729124" duration="824000" />
+      <workItem from="1685353566776" duration="468000" />
+      <workItem from="1685354101760" duration="107000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

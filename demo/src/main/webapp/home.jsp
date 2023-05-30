@@ -13,7 +13,7 @@
     }
 </style>
 <body>
-<form method="post" action="/DiscountServlet">
+<form method="post" action="/discount-servlet">
     <div class="discount">
         <h3>Product Discount Calculator</h3>
         <input type="text" name="description" size="30" style="width: 228px" placeholder="Product Description"/>

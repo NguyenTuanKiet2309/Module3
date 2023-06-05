@@ -11,16 +11,15 @@ public class UserRepository implements IUserRepository {
     private String jdbcUsername = "root";
     private String jdbcPassword = "codegym";
 
-    private static final String INSERT_USERS_SQL = "INSERT INTO users" + "  (name, email, country) VALUES " +
-            " (?, ?, ?);";
-
-    private static final String SELECT_ALL_USERS = "select * from users";
-    private static final String DELETE_USERS_SQL = "delete from users where id = ?";
+    private static final String SP_INSERT_USERS_SQL = "call add_new_users(?,?,?)";
+    private static final String SP_SELECT_ALL_USERS = "call find_all()";
+    private static final String SP_DELETE_USERS_SQL = "call delete_users(?)";
     private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
     private static final String FIND_BY_COUNTRY = "select * from users where country like ?";
     private static final String SORT_BY_NAME = "select * from users order by name";
 
-    protected Connection getConnection() {
+
+    public Connection getConnection() {
         Connection connection = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -28,20 +27,46 @@ public class UserRepository implements IUserRepository {
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return connection;
     }
 
+    private void addUserTransaction() {
+        Connection connection = getConnection();
+        Savepoint savepoint = null;
+        try {
+            connection.setAutoCommit(false);
+            PreparedStatement preparedStatement1 = connection.prepareStatement("insert into users(name,email,country)" +
+                    " values ('Kiệt','kiet@gmail','GiaLai')");
+            PreparedStatement preparedStatement2 = connection.prepareStatement("insert into users(name,email,country)" +
+                    " values ('nhan','nhan@gmail','QuangNam',1)");
+            PreparedStatement preparedStatement3 = connection.prepareStatement("insert into users(name,email,country)" +
+                    " values ('huy','huy@gmail','GiaLai')");
+            preparedStatement1.executeUpdate();
+            preparedStatement2.executeUpdate();
+            savepoint = connection.setSavepoint("save_point_1");
+            preparedStatement3.executeUpdate();
+            connection.commit();
+        } catch (SQLException e) {
+            try {
+                connection.rollback(savepoint);
+                connection.commit();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public void insertUser(User user) throws SQLException {
-        try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
-            preparedStatement.setString(1, user.getName());
-            preparedStatement.setString(2, user.getEmail());
-            preparedStatement.setString(3, user.getCountry());
-            preparedStatement.executeUpdate();
+        Connection connection = getConnection();
+        try (CallableStatement callableStatement = connection.prepareCall(SP_INSERT_USERS_SQL)) {
+            callableStatement.setString(1, user.getName());
+            callableStatement.setString(2, user.getEmail());
+            callableStatement.setString(3, user.getCountry());
+            callableStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -52,8 +77,8 @@ public class UserRepository implements IUserRepository {
     public List<User> getAll() {
         List<User> users = new ArrayList<>();
         Connection connection = getConnection();
-        try (PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);) {
-            ResultSet resultSet = preparedStatement.executeQuery();
+        try (CallableStatement callableStatement = connection.prepareCall(SP_SELECT_ALL_USERS);) {
+            ResultSet resultSet = callableStatement.executeQuery();
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
@@ -77,9 +102,9 @@ public class UserRepository implements IUserRepository {
     public void delete(int id) {
         Connection connection = getConnection();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(DELETE_USERS_SQL);
-            preparedStatement.setInt(1, id);
-            preparedStatement.executeUpdate();
+            CallableStatement callableStatement = connection.prepareCall(SP_DELETE_USERS_SQL);
+            callableStatement.setInt(1, id);
+            callableStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -141,8 +166,8 @@ public class UserRepository implements IUserRepository {
     @Override
     public List<User> sortByName() {
         List<User> userList = new ArrayList<>();
-        try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(SORT_BY_NAME)) {
+        Connection connection = getConnection();
+        try (PreparedStatement preparedStatement = connection.prepareStatement(SORT_BY_NAME)) {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");

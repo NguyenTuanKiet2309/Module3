@@ -1,5 +1,4 @@
 <%@ page import="java.util.List" %>
-<%--<%@ page import="com.example.ourproject.model.Cart" %>--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -21,6 +20,7 @@
     ></script>
     <link href="style.css" rel="stylesheet">
     <title>Home</title>
+
 </head>
 <style>
     *,
@@ -28,10 +28,12 @@
     *::after {
         box-sizing: border-box;
     }
+
     * {
         padding: 0;
         margin: 0;
     }
+
     .message-header {
         background: black;
         text-align: center;
@@ -39,22 +41,28 @@
         padding: 0.5em 0;
         font-size: 14px;
     }
+
     p {
         margin: 0;
     }
+
     .logo {
         width: 150px;
     }
+
     .bag-icon {
         display: inline;
         margin-left: 1rem;
     }
+
     i {
         font-size: 1.5rem;
     }
+
     .card {
         border: none;
     }
+
     footer a {
         text-decoration: none;
         text-transform: uppercase;
@@ -62,14 +70,18 @@
         display: inline-block;
         color: black;
     }
+
     footer a:hover {
         color: palevioletred;
         text-decoration: underline;
     }
+
+
     .footer--text {
         color: gray;
         font-size: 0.85rem;
     }
+
     .links {
         font-size: 1.5rem;
         text-decoration: none;
@@ -78,15 +90,20 @@
         color: gray;
         font-weight: lighter;
     }
+
     .links:hover {
         color: palevioletred;
         text-decoration: underline;
     }
+
     .hamburger {
         background: white;
         border: none;
     }
+
+
     @media (max-width: 768px) {
+
         .overlay--main {
             z-index: 999;
             position: absolute;
@@ -97,16 +114,19 @@
             background: white;
             /*padding: .5em 1em;*/
         }
+
         .overlay--main a {
             font-size: 1.5rem;
             font-weight: lighter;
             text-decoration: none;
             color: black;
         }
+
+
     }
 </style>
+
 <body>
-<%--<% List<Cart> cartList = (List<Cart>) session.getAttribute("cartList"); %>--%>
 <div class="header">
     <div class="message-header">
         <p>
@@ -120,6 +140,7 @@
                     <i class="fa fa-bars switcher-icon"></i>
                 </button>
             </div>
+
             <div class="row col col-md-auto align-items-center">
                 <div class="col col-auto">
                     <img
@@ -130,9 +151,10 @@
                 <div class="col d-md-block d-none">
                     <a class="links" href="/home">SMITHEREENS</a>
                     <a class="links" href="/music">MUSIC</a>
-                    <a class="links" href="/merch">MERCH</a>
+                    <a class="links" href="/order-servlet">OrderManagement</a>
                 </div>
             </div>
+
             <div class="col col-auto">
                 <a href="/login" class="text-dark"><i class="far fa-user"></i></a>
                 <a href="/cart" class="text-dark p-0">
@@ -149,6 +171,8 @@
         </div>
     </div>
 </div>
+
+
 <section class="overlay--main d-md-none" style="display: none">
     <table class="table table-hover">
         <tr class="table-group-divider">
@@ -162,7 +186,10 @@
         </tr>
     </table>
 </section>
+
+
 <script>
+
     function switcher() {
         let overlayMain = document.querySelector(".overlay--main");
         if (overlayMain.style.display === "none") {
@@ -172,6 +199,7 @@
             overlayMain.style.display = "none";
             document.body.style.overflow = "visible";
         }
+
     }
 </script>
 </body>

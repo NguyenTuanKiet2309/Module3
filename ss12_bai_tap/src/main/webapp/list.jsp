@@ -44,11 +44,11 @@
             </tr>
             </thead>
             <tbody>
-            <c:forEach var="user" items="${userList}">
+                <c:forEach var="user" items="${userList}">
                 <tr>
                     <td><c:out value="${user.id}"/></td>
                     <td><c:out value="${user.name}"/></td>
-                    <td><c:out value="${user.email}"/></td>
+                    <td><c:out value="${user.gmail}"/></td>
                     <td><c:out value="${user.country}"/></td>
                     <td>
                         <a href="/user-servlet?action=edit&id=${user.id}">Edit</a>

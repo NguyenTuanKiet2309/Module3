@@ -4,6 +4,6 @@
     <title>Title</title>
 </head>
 <body>
-<c:redirect url="view/home.jsp"></c:redirect>
+<c:redirect url="/view/home.jsp"></c:redirect>
 </body>
 </html>

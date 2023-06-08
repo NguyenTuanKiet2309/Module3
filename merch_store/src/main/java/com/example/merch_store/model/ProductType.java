@@ -4,7 +4,8 @@ public class ProductType {
     private int id;
     private String name;
 
-    public ProductType() {    }
+    public ProductType() {
+    }
 
     public ProductType(int id, String name) {
         this.id = id;

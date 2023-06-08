@@ -6,23 +6,38 @@ public class Customer {
     private String email;
     private int phoneNumber;
     private String address;
+    private AccountUser accountUser;
 
-    public Customer(int id, String name, String email, int phoneNumber, String address) {
+    public Customer(String name) {
+        this.name = name;
+    }
+
+    public Customer(String name, String email, int phoneNumber, String address, AccountUser accountUser) {
+        this.name = name;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+        this.accountUser = accountUser;
+    }
+
+    public Customer(int id, String name, String email, int phoneNumber, String address, AccountUser accountId) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.address = address;
+        this.accountUser = accountId;
     }
 
     public Customer() {
     }
 
-    public Customer(String name, String email, int phoneNumber, String address) {
-        this.name = name;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-        this.address = address;
+    public AccountUser getAccountUser() {
+        return accountUser;
+    }
+
+    public void setAccountUser(AccountUser accountUser) {
+        this.accountUser = accountUser;
     }
 
     public int getId() {

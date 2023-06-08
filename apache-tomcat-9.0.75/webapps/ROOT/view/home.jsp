@@ -147,7 +147,6 @@
 <section>
     <div class="container mt-2">
         <div class="row row-cols-md-3 row-cols-2 justify-content-center gy-2 gx-3" id="tableStudent">
-
             <c:forEach var="product" items="${products}">
                 <div class="col">
                     <div class="row justify-content-center">

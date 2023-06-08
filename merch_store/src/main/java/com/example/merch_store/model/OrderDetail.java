@@ -4,25 +4,24 @@ public class OrderDetail {
     private int id;
     private Order order;
     private Product product;
-    private int quantity; // số lượng
-    private double unitPrice; // giá product
+    private int quantity;
+    private double price;
 
     public OrderDetail() {
+    }
+
+    public OrderDetail(int id, Product product, int quantity, double price) {
+        this.id = id;
+        this.product = product;
+        this.quantity = quantity;
+        this.price = price;
     }
 
     public OrderDetail(Order order, Product product, int quantity, double price) {
         this.order = order;
         this.product = product;
         this.quantity = quantity;
-        this.unitPrice = price;
-    }
-
-    public OrderDetail(int id, Order order, Product product, int quantity, double price) {
-        this.id = id;
-        this.order = order;
-        this.product = product;
-        this.quantity = quantity;
-        this.unitPrice = price;
+        this.price = price;
     }
 
     public Order getOrder() {
@@ -57,11 +56,11 @@ public class OrderDetail {
         this.quantity = quantity;
     }
 
-    public double getUnitPrice() {
-        return unitPrice;
+    public double getPrice() {
+        return price;
     }
 
-    public void setUnitPrice(double unitPrice) {
-        this.unitPrice = unitPrice;
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

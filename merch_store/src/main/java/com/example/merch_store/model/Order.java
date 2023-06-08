@@ -1,27 +1,32 @@
 package com.example.merch_store.model;
 
-import java.util.List;
-
 public class Order {
     private int id;
+    private String date;
     private Customer customer;
-    private List<OrderDetail> orderDetails;
+    private Employee employee;
     private String status;
+
+    public Order(String date, Customer customer, Employee employee, String status) {
+        this.date = date;
+        this.customer = customer;
+        this.employee = employee;
+        this.status = status;
+    }
+
+    public Order(int id, String date, Customer customer, Employee employee, String status) {
+        this.id = id;
+        this.date = date;
+        this.customer = customer;
+        this.employee = employee;
+        this.status = status;
+    }
 
     public Order() {
     }
 
-    public Order(int id, Customer customer, List<OrderDetail> products, String status) {
+    public Order(int id) {
         this.id = id;
-        this.customer = customer;
-        this.orderDetails = products;
-        this.status = status;
-    }
-
-    public Order(Customer customer, List<OrderDetail> products, String status) {
-        this.customer = customer;
-        this.orderDetails = products;
-        this.status = status;
     }
 
     public int getId() {
@@ -32,6 +37,14 @@ public class Order {
         this.id = id;
     }
 
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
     public Customer getCustomer() {
         return customer;
     }
@@ -40,12 +53,12 @@ public class Order {
         this.customer = customer;
     }
 
-    public List<OrderDetail> getOrderDetails() {
-        return orderDetails;
+    public Employee getEmployee() {
+        return employee;
     }
 
-    public void setOrderDetails(List<OrderDetail> orderDetails) {
-        this.orderDetails = orderDetails;
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 
     public String getStatus() {
@@ -56,3 +69,4 @@ public class Order {
         this.status = status;
     }
 }
+

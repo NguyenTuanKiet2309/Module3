@@ -64,7 +64,7 @@ public class UserRepository implements IUserRepository {
         Connection connection = getConnection();
         try (CallableStatement callableStatement = connection.prepareCall(SP_INSERT_USERS_SQL)) {
             callableStatement.setString(1, user.getName());
-            callableStatement.setString(2, user.getEmail());
+            callableStatement.setString(2, user.getGmail());
             callableStatement.setString(3, user.getCountry());
             callableStatement.executeUpdate();
         } catch (SQLException e) {
@@ -80,11 +80,11 @@ public class UserRepository implements IUserRepository {
         try (CallableStatement callableStatement = connection.prepareCall(SP_SELECT_ALL_USERS);) {
             ResultSet resultSet = callableStatement.executeQuery();
             while (resultSet.next()) {
-                int id = resultSet.getInt("id");
+                int id1 = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 String email = resultSet.getString("email");
                 String country = resultSet.getString("country");
-                users.add(new User(id, name, email, country));
+                users.add(new User(id1, name, email, country));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -122,7 +122,7 @@ public class UserRepository implements IUserRepository {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_USERS_SQL);
             preparedStatement.setString(1, user.getName());
-            preparedStatement.setString(2, user.getEmail());
+            preparedStatement.setString(2, user.getGmail());
             preparedStatement.setString(3, user.getCountry());
             preparedStatement.setInt(4, user.getId());
             preparedStatement.executeUpdate();
@@ -142,7 +142,7 @@ public class UserRepository implements IUserRepository {
     public List<User> findByCountry(String country) {
         List<User> users = new ArrayList<>();
         Connection connection = getConnection();
-        try (PreparedStatement preparedStatement = connection.prepareStatement(FIND_BY_COUNTRY);) {
+        try (PreparedStatement preparedStatement = connection.prepareStatement(FIND_BY_COUNTRY)) {
             preparedStatement.setString(1, country);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
